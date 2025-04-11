@@ -7,7 +7,8 @@
 ![WeChat QR Code](https://github.com/iamqiang/ChatUIMobile/blob/main/public/qrcode.jpg?raw=true)  
 (Scan to add WeChat, remark "ChatUI Communication")
 
-中文 ： | （https://github.com/iamqiang/ChatUIMobile/blob/main/README-ZH.md）
+中文 ： https://github.com/iamqiang/ChatUIMobile/blob/main/README-ZH.md
+English ： https://github.com/iamqiang/ChatUIMobile/blob/main/README.md
 
 ## Demo Screenshots
 
