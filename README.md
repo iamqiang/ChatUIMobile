@@ -1,4 +1,4 @@
-# Project Title
+# ChatUI - 一个基于ChatUI 3.0的大模型（使用DeepSeek API演示）对话式交互项目。
 
 ## 环境准备
 
