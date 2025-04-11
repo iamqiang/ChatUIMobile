@@ -1,116 +1,116 @@
-# ChatUI - 一个基于ChatUI 3.0的大模型（使用DeepSeek API演示）对话式交互项目。
+# ChatUI - A Conversational Interaction Project Based on ChatUI 3.0 with Large Language Model (DeepSeek API Demo)
 
-## 项目维护者
+## Maintainers
 
-**QIANG**  | 架构师
+**QIANG** | Architect
 
 ![WeChat QR Code](https://github.com/iamqiang/ChatUIMobile/blob/main/public/qrcode.jpg?raw=true)  
-（扫码添加微信，备注「ChatUI交流」）
+(Scan to add WeChat, remark "ChatUI Communication")
 
-## 示例图片
+## Demo Screenshots
 
-![示例图片1](https://github.com/iamqiang/ChatUIMobile/blob/main/demo/1.png?raw=true)  
-![示例图片2](https://github.com/iamqiang/ChatUIMobile/blob/main/demo/2.png?raw=true)  
-![示例图片3](https://github.com/iamqiang/ChatUIMobile/blob/main/demo/3.png?raw=true)  
-![示例图片4](https://github.com/iamqiang/ChatUIMobile/blob/main/demo/4.png?raw=true)  
+![Demo 1](https://github.com/iamqiang/ChatUIMobile/blob/main/demo/1.png?raw=true)  
+![Demo 2](https://github.com/iamqiang/ChatUIMobile/blob/main/demo/2.png?raw=true)  
+![Demo 3](https://github.com/iamqiang/ChatUIMobile/blob/main/demo/3.png?raw=true)  
+![Demo 4](https://github.com/iamqiang/ChatUIMobile/blob/main/demo/4.png?raw=true)  
 
-## 环境准备
+## Environment Setup
 
-### 安装 Node.js
-- 要求 Node.js 18 或更高版本
-- 验证 Node.js 版本：
+### Install Node.js
+- Requires Node.js 18 or higher
+- Verify Node.js version:
   ```bash
   node -v
-  # 示例输出: v20.18.0
+  # Sample output: v20.18.0
   ```
 
-## 快速开始
+## Quick Start
 
-### 1. 安装依赖
+### 1. Install Dependencies
 ```bash
 npm install
-# 依赖将安装到 node_modules 目录
-# 安装完成后可执行 `npm fund` 查看包资助信息
+# Dependencies will be installed to node_modules directory
+# Execute `npm fund` after installation to view package funding info
 ```
 
-### 2. 启动开发服务器
+### 2. Start Development Server
 ```bash
 npm start
-# 浏览器将自动打开地址： http://localhost:3000/
+# Browser will automatically open: http://localhost:3000/
 ```
 
-## 项目构建
+## Build Project
 
-### 生成生产版本
+### Generate Production Build
 ```bash
 npm run build
-# 构建产物将输出到 build 目录，直接将目录下的所有文件部署到网站的根目录即可
+# Build artifacts will be output to build directory. Deploy all files under this directory to website root.
 ```
 
-### 子目录部署配置
-当需要部署到非根路径时（如 `http://localhost:3000/chatui/`），需要使用如下命令构建：
+### Subdirectory Deployment Configuration
+When deploying to non-root paths (e.g. `http://localhost:3000/chatui/`), use following commands:
 
-**Windows 系统：**
+**Windows:**
 ```cmd
 set PUBLIC_URL=/chatui && npm run build
 ```
 
-**Linux/macOS 系统：**
+**Linux/macOS:**
 ```bash
 PUBLIC_URL=/chatui npm run build
 ```
 
-## 注意事项
-- 非根目录部署时，子目录名称需与 `PUBLIC_URL` 变量值严格匹配
+## Notes
+- Subdirectory name must exactly match `PUBLIC_URL` value for non-root deployments
 
-## ChatUI框架介绍
+## ChatUI Framework Introduction
 
-ChatUI 是阿里达摩院推出的一款专为构建专业级即时通讯应用设计的开源UI组件库，提供高度可定制的聊天界面解决方案。
+ChatUI is an open-source UI component library developed by Alibaba DAMO Academy, specifically designed for building professional instant messaging applications with highly customizable chat interface solutions.
 
-### 核心特性
+### Core Features
 
-**开箱即用的组件库**
-- 消息气泡组件
-- 会话列表模板
-- 输入工具栏
-- 文件传输预览
-- 表情符号选择器
+**Out-of-the-Box Components**
+- Message bubble components
+- Conversation list templates
+- Input toolbar
+- File transfer preview
+- Emoji picker
 
-**深度定制能力**
-- 支持主题样式覆盖
-- 多语言国际化(i18n)支持
-- 响应式布局适配
-- 无障碍访问(WCAG)支持
+**Deep Customization**
+- Theme style overrides
+- Multi-language i18n support
+- Responsive layout adaptation
+- WCAG accessibility compliance
 
-**跨平台支持**
-- Web 端 (React/Vue)
-- 移动端 (React Native)
-- 桌面端 (Electron)
+**Cross-Platform Support**
+- Web (React/Vue)
+- Mobile (React Native)
+- Desktop (Electron)
 
-**开发友好**
-- TypeScript 类型支持
-- 模块化架构设计
-- 完善的单元测试覆盖
-- 详细的开发文档
+**Developer Friendly**
+- TypeScript type definitions
+- Modular architecture
+- Comprehensive unit test coverage
+- Detailed documentation
 
-### 适用场景
+### Use Cases
 
-- 企业即时通讯（IM）系统
-- 在线客服平台
-- 社交应用聊天模块
-- 直播互动消息系统
-- 物联网设备控制终端
+- Enterprise IM systems
+- Online customer service platforms
+- Social app chat modules
+- Live streaming interaction systems
+- IoT device control terminals
 
-### 官方资源
+### Official Resources
 
-官网地址：  
+Official Website:  
 [https://chatui.io/](https://chatui.io/)
 
-npm 仓库：  
+npm Package:  
 `npm install @chatui/core`
 
-开发文档：  
+Documentation:  
 [https://docs.chatui.io/](https://docs.chatui.io/)
 
-技术支持：  
-[社区论坛](https://forum.chatui.io/) 
+Technical Support:  
+[Community Forum](https://forum.chatui.io/)
