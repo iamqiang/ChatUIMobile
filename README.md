@@ -7,6 +7,13 @@
 ![WeChat QR Code](https://github.com/iamqiang/ChatUIMobile/blob/main/public/qrcode.jpg?raw=true)  
 （扫码添加微信，备注「ChatUI交流」）
 
+## 示例图片
+
+![示例图片1](https://github.com/iamqiang/ChatUIMobile/blob/main/demo/1.png?raw=true)  
+![示例图片2](https://github.com/iamqiang/ChatUIMobile/blob/main/demo/2.png?raw=true)  
+![示例图片3](https://github.com/iamqiang/ChatUIMobile/blob/main/demo/3.png?raw=true)  
+![示例图片4](https://github.com/iamqiang/ChatUIMobile/blob/main/demo/4.png?raw=true)  
+
 ## 环境准备
 
 ### 安装 Node.js
