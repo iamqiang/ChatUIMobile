@@ -4,7 +4,7 @@
 
 **QIANG**  | 架构师
 
-![WeChat QR Code](https://your-image-host.com/wechat-qrcode.png)  
+![WeChat QR Code]([https://your-image-host.com/wechat-qrcode.png](https://github.com/iamqiang/ChatUIMobile/blob/main/public/qrcode.jpg?raw=true))  
 （扫码添加微信，备注「ChatUI交流」）
 
 ## 环境准备
