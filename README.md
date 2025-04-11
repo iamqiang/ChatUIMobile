@@ -49,9 +49,8 @@ PUBLIC_URL=/chatui npm run build
 ## 注意事项
 - 非根目录部署时，子目录名称需与 `PUBLIC_URL` 变量值严格匹配
 
-## ChatUI介绍
+## ChatUI框架介绍
 
-**现代化聊天界面框架**  
 ChatUI 是阿里达摩院推出的一款专为构建专业级即时通讯应用设计的开源UI组件库，提供高度可定制的聊天界面解决方案。
 
 ### 核心特性
@@ -100,4 +99,4 @@ npm 仓库：
 [https://docs.chatui.io/](https://docs.chatui.io/)
 
 技术支持：  
-[社区论坛](https://forum.chatui.io/) | [GitHub Issues](https://github.com/chatui/chatui/issues)
+[社区论坛](https://forum.chatui.io/) 
