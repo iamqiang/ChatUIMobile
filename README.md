@@ -2,8 +2,7 @@
 
 ## 项目维护者
 
-**QIANG**  
-架构师
+**QIANG**  | 架构师
 
 ![WeChat QR Code](https://your-image-host.com/wechat-qrcode.png)  
 （扫码添加微信，备注「ChatUI交流」）
