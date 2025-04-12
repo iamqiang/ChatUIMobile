@@ -115,5 +115,3 @@ npm 仓库：
 开发文档：  
 [https://docs.chatui.io/](https://docs.chatui.io/)
 
-技术支持：  
-[社区论坛](https://forum.chatui.io/) 
