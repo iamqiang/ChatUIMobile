@@ -115,5 +115,3 @@ npm Package:
 Documentation:  
 [https://docs.chatui.io/](https://docs.chatui.io/)
 
-Technical Support:  
-[Community Forum](https://forum.chatui.io/)
