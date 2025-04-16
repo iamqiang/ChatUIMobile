@@ -19,6 +19,10 @@
 
 ## 环境准备
 
+### 申请大模型apiKey
+前往DeepSeek开放平台申请：https://platform.deepseek.com/api_keys
+操作步骤：注册->创建apiKey->充值（最低可充值1元人民币）
+
 ### 安装 Node.js
 - 要求 Node.js 18 或更高版本
 - 验证 Node.js 版本：
