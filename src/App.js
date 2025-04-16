@@ -88,9 +88,6 @@ export default () => {
 			position: 'left',
 		  });
 
-		  let reasoning_content: string = '';
-		  let content: string = '';
-		  let type: string = '';
 
 		  // 2.3. 请求大模型
 		  const stream = await client.chat.completions.create({
@@ -101,48 +98,66 @@ export default () => {
 		  });
 
 		  let i = 0;
-		  const startTime = performance.now();
-		  for await (const chunk of stream) {
-			if (chunk.choices[0]?.delta?.reasoning_content){
-				reasoning_content += chunk.choices[0]?.delta?.reasoning_content || '';
-			}
-			if (chunk.choices[0]?.delta?.content){
-				content += chunk.choices[0]?.delta?.content || '';
-			}
+		  let finish_flag = false;
+		  let reasoning_content: string = '';
+		  let content: string = '';
+		  let type: string = '';
+		  let thinkTime: int = 0;
 
-			const thinkTime = Math.round((performance.now() - startTime) / 100) / 10;
-			
-			if (chunk.choices[0]?.finish_reason){
-				if (i==0){
-					updateMsg(typingMsgId_think.current, {
+		  const startTime = performance.now();
+		  try {
+			for await (const chunk of stream) {
+			  //let finish_flag_cur = '';
+			  let reasoning_content_cur = '';
+			  let content_cur = '';
+
+			  //finish_flag_cur = chunk.choices[0]?.finish_reason;
+			  reasoning_content_cur = chunk.choices[0]?.delta?.reasoning_content;
+			  console.log("reasoning_content_cur",reasoning_content_cur);
+			  content_cur = chunk.choices[0]?.delta?.content;
+			  console.log("content_cur",content_cur);
+			  if(reasoning_content_cur){
+			  	reasoning_content += reasoning_content_cur || '';
+			  }
+			  if(content_cur){
+				content += content_cur || '';
+			  }
+			  
+			  //思考中
+			  if(reasoning_content && reasoning_content_cur){
+				  let thinkTime = Math.round((performance.now() - startTime) / 100) / 10;
+
+				  updateMsg(typingMsgId_think.current, {
 					  type: 'thinking',
-					  content: { text: reasoning_content,thinkTime:thinkTime,isDone:true }
+					  content: { text: reasoning_content, thinkTime: thinkTime, isDone: false }
 					});
-					
+			  }
+
+			  //思考结束
+			  if(reasoning_content && ! reasoning_content_cur){
+				finish_flag=true;
+				if(i===0){
 					typingMsgId_answer.current = appendMsg({
 						type: 'typing',
 						position: 'left'
 					  });
 				}
-				if(content){
-					updateMsg(typingMsgId_answer.current, {
-					  type: 'stream',
-					  content: { text: content },
+				  
+				updateMsg(typingMsgId_answer.current, {
+					type: 'stream',
+					content: { text: content },
 					});
-				}
 				
-				i+=1;
-			} else {
-				updateMsg(typingMsgId_think.current, {
-					type: 'thinking',
-					content: { text: reasoning_content, thinkTime: thinkTime, isDone: false }
-				  });
+				i++;
+			  }
 			}
 			
+		  } catch (error) {
+			console.error("Error in handleSend:", error);
 		  }
 
 		  typingMsgId_think.current = '';
-		  typingMsgId_think.typingMsgId_answer = '';
+		  typingMsgId_answer.current = '';
 		}
 	  }
 
@@ -155,11 +170,12 @@ export default () => {
 			return <Bubble data-animation='fadeInUp' content={content.text} />;
 		  case 'stream':
 		    let textstr = marked.parse(content.text);
+			//let textstr = content.text;
 			return (
 			  <TypingBubble
 				content={textstr}
 				isRichText
-				options={{ step: [1, 6], interval: 100 }}
+				options={{ step: [1, 10], interval: 20 }}
 			  />
 			);
 		  case 'typing':
