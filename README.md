@@ -28,7 +28,7 @@ Steps:
 
 - Create an API Key
 
-- Top up (minimum top-up amount is 1 RMB)
+- Recharge (minimum recharge amount is 1 RMB)
 
 ### Install Node.js
 - Requires Node.js 18 or higher
