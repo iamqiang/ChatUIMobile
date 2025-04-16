@@ -19,6 +19,17 @@
 
 ## Environment Setup
 
+### Apply for a Large Model API Key
+Visit the DeepSeek Open Platform to apply: https://platform.deepseek.com/api_keys
+
+Steps:
+
+- Register
+
+- Create an API Key
+
+- Top up (minimum top-up amount is 1 RMB)
+
 ### Install Node.js
 - Requires Node.js 18 or higher
 - Verify Node.js version:
